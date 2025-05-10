@@ -340,7 +340,12 @@ const MindMapGenerator = () => {
         console.log("Using MindMapAI default API for generation");
       }
       
-      const response = await axios.post('http://localhost:8000/generate_map', requestPayload);
+      const response = await axios.post(
+        process.env.REACT_APP_API_URL
+          ? `${process.env.REACT_APP_API_URL}/generate_map`
+          : 'https://mindmapai-lou5.onrender.com/generate_map',
+        requestPayload
+      );
       
       console.log("API response:", response.data);
       setMermaidCode(response.data.mermaid);
