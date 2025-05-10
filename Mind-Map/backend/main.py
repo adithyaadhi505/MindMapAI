@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Any, Dict
 from .nlp_service import extract_concepts_and_relationships, research_and_extract, GEMINI_API_KEY, MISTRAL_API_KEY
-from mermaid_formatter import to_mermaid
+from backend.mermaid_formatter import to_mermaid
 from fastapi.middleware.cors import CORSMiddleware
 
 print("Starting FastAPI application")
