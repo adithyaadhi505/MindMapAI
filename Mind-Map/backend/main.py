@@ -22,7 +22,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # or ["*"] for all origins (not recommended for production)
+    allow_origins=[
+        "https://mindmapai-1-89h7.onrender.com",  # Your frontend Render URL
+        "http://localhost:3000"  # (optional) for local dev
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
