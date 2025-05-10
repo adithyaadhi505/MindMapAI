@@ -125,10 +125,6 @@ You can customize various aspects of the mind map generation:
 - **LinkedIn**: [adithya982](https://www.linkedin.com/in/adithya982)
 - **Email**: adi771121@gmail.com
 
-## 📝 License
-
-[MIT License](LICENSE)
-
 ## 👏 Acknowledgements
 
 - [FastAPI](https://fastapi.tiangolo.com/)
