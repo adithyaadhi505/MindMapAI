@@ -44,6 +44,7 @@ pip-delete-this-directory.txt
 .env.production.local
 .env
 !.env.example
+create_env.py/
 
 # Logs
 logs
