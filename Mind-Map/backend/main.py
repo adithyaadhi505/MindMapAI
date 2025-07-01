@@ -23,7 +23,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://mindmapai-tk7w.onrender.com",  # your deployed frontend
+        "https://mindmapai-ns7n.onrender.com",  # your new frontend URL
     ],
     allow_credentials=True,
     allow_methods=["*"],
