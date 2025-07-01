@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Any, Dict
-from .nlp_service import extract_concepts_and_relationships, research_and_extract, GEMINI_API_KEY, MISTRAL_API_KEY
-from backend.mermaid_formatter import to_mermaid
+from nlp_service import extract_concepts_and_relationships, research_and_extract, GEMINI_API_KEY, MISTRAL_API_KEY
+from mermaid_formatter import to_mermaid
 from fastapi.middleware.cors import CORSMiddleware
 
 print("Starting FastAPI application")
@@ -23,8 +23,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://mindmapai-1-89h7.onrender.com",  # Your frontend Render URL
-        "http://localhost:3000"  # (optional) for local dev
+        "https://mindmapai-1-89h7.onrender.com",  # your deployed frontend
+        "http://localhost:3000",                  # local dev frontend
+        "http://127.0.0.1:3000"
     ],
     allow_credentials=True,
     allow_methods=["*"],
