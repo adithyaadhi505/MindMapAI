@@ -25,7 +25,8 @@ app.add_middleware(
     allow_origins=[
         "https://mindmapai-1-89h7.onrender.com",  # your deployed frontend
         "http://localhost:3000",                  # local dev frontend
-        "http://127.0.0.1:3000"
+        "http://127.0.0.1:3000",
+        "https://your-frontend-url.onrender.com",  # replace with your actual frontend Render URL
     ],
     allow_credentials=True,
     allow_methods=["*"],
